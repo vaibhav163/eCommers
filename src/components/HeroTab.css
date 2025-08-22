@@ -1,0 +1,56 @@
+.hero-tab{
+  background-color: red;
+}
+
+.hero-slide img {
+  width: 100vw;
+  height: 90vh;
+}
+.category-name{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.category-slider-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.category-image{
+  width: 13vw;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 10%;
+}
+.herotab-banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.herotab-banner-content {
+  padding: 3rem;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.herotab-banner-content img {
+  width: 100%;
+  height: auto;
+}
+.herotab-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}

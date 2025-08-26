@@ -1,0 +1,17 @@
+*{
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+.shop-banner-text{
+    position: absolute;
+    /* display:flex;
+    align-items: center; */
+    bottom: 20px;
+    left: 20px;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.shop-banner{
+    position: relative;
+    margin-bottom:30px;
+}

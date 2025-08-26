@@ -1,7 +1,11 @@
 import React from 'react'
 import "./Navbar.css"
+import Shop from "./shop.jsx"
+import Herotab from "./herotab.jsx"
+import { Link, Routes, Route } from 'react-router-dom'
 const Navbar = () => {
   return (
+    <>
     <nav className='navbar'>
         <div className="navbar-container">
         <div className="navbar-logo">
@@ -12,25 +16,18 @@ const Navbar = () => {
         </div>
         <ul className="navbar-menu">
             <li className='navbar-item'>
-                <a href="/" className='navbar-link'>
-                Home
-                </a>
+                <Link className='navbar-link' to="/">home</Link>
             </li>
             <li className='navbar-item'>
-                <a href="/" className='navbar-link'>
-                Shop
-                </a>
+                <Link className='navbar-link' to="/shop">Shop</Link>
+                {/* <a href='/' className='navbar-link'>shop </a> */}
             </li>
             <li className='navbar-item'>
-                <a href="/" className='navbar-link'>
-                Products
-                </a>
+                <Link className='navbar-link' to='/product'>Product</Link>
             </li>
             <li className='navbar-item'>
-                <a href="/" className='navbar-link'>
-                Blog
-                </a>
-            </li>
+              <Link className='navbar-link' to='/blog'>Blog</Link>
+                 </li>
         </ul>
         <div className="navbar-icons">
             <button className='icon-btn search-btn'>
@@ -62,6 +59,8 @@ const Navbar = () => {
         </div>
 
     </nav>
+    
+    </>
 
 
   )

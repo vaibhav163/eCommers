@@ -4,6 +4,10 @@ import Shop from "./shop.jsx"
 import Herotab from "./herotab.jsx"
 import { Link, Routes, Route } from 'react-router-dom'
 const Navbar = () => {
+  const  [homecta,setHomecta] = React.useState(false);
+  const [shopDropdown, setShopDropdown] = React.useState(false);
+  const [productDropdown, setProductDropdown] = React.useState(false);
+  const [blogDropdown, setBlogDropdown] = React.useState(false);
   return (
     <>
     <nav className='navbar'>
@@ -16,18 +20,38 @@ const Navbar = () => {
         </div>
         <ul className="navbar-menu">
             <li className='navbar-item'>
-                <Link className='navbar-link' to="/">home</Link>
+                <Link onMouseEnter={() => setHomecta(!homecta)} className='navbar-link' to="/">home</Link>
+                {homecta && <ul className="dropdown-menu"><li><a href="/">Submenu Item 1</a></li><li><a href="/">Submenu Item 2</a></li>
+            <li><a href="/">Submenu Item 3</a></li>
+            <li><a href="/">Submenu Item 4</a></li>
+            <li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li>
+            </ul>}
             </li>
             <li className='navbar-item'>
-                <Link className='navbar-link' to="/shop">Shop</Link>
+                <Link onMouseEnter={() => setShopDropdown(!shopDropdown)}   className='navbar-link' to="/shop">Shop</Link>
                 {/* <a href='/' className='navbar-link'>shop </a> */}
+                {shopDropdown && <ul className="dropdown-menu"><li><a href="/">Submenu Item 1</a></li><li><a href="/">Submenu Item 2</a></li>
+            <li><a href="/">Submenu Item 3</a></li>
+            <li><a href="/">Submenu Item 4</a></li>
+            <li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li>
+            </ul>}
+                </li>
+            <li className='navbar-item'>
+                <Link onMouseEnter={() => setProductDropdown(!productDropdown)} className='navbar-link' to='/product'>Product</Link>
+                {productDropdown && <ul className="dropdown-menu"><li><a href="/">Submenu Item 1</a></li><li><a href="/">Submenu Item 2</a></li>
+            <li><a href="/">Submenu Item 3</a></li>
+            <li><a href="/">Submenu Item 4</a></li>
+            <li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li>
+            </ul>}
             </li>
             <li className='navbar-item'>
-                <Link className='navbar-link' to='/product'>Product</Link>
-            </li>
-            <li className='navbar-item'>
-              <Link className='navbar-link' to='/blog'>Blog</Link>
+              <Link onMouseEnter={() => setBlogDropdown(!blogDropdown)} className='navbar-link' to='/blog'>Blog</Link>
                  </li>
+                 {blogDropdown && <ul className="dropdown-menu"><li><a href="/">Submenu Item 1</a></li><li><a href="/">Submenu Item 2</a></li>
+            <li><a href="/">Submenu Item 3</a></li>
+            <li><a href="/">Submenu Item 4</a></li>
+            <li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li><li><a href="/">Submenu Item 4</a></li>
+            </ul>}
         </ul>
         <div className="navbar-icons">
             <button className='icon-btn search-btn'>

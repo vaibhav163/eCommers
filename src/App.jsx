@@ -22,8 +22,11 @@ function App() {
                     <Route path='/Product' element={<Product/>}/>
                     <Route path='/Blog' element={<Blog/>}/>
                   </Routes>
+      {/* <HeroTab /> */}
+      {/* <Swier /> */}
     </>
   )
 }
 
 export default App
+

@@ -8,6 +8,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/controller';
 import ProductCard from './ProductCard.jsx';
 
 // import { Navigation, Pagination } from 'swiper';
@@ -68,8 +69,8 @@ const HeroTab = () => {
         </SwiperSlide>
       </Swiper>
       <div className="shopbycategory">
-        <h1 style={{textAlign:'center'}}>Shop by Category</h1>
-        <p style={{textAlign:'center'}}>Explore our wide range of products</p>
+        <h1 className='shopbycategory-h1'>Shop by Category</h1>
+        <p className="shopbycategory-p">Express your style with our standout collection—fashion meets sophistication.</p>
         <div className='category-slider-container'>
       <div className='category-slider' >
         <a href='/'><img className='category-image'  src="https://demo-milano.myshopify.com/cdn/shop/files/main_clt3.webp?v=1745943972"/></a>
@@ -124,11 +125,38 @@ const HeroTab = () => {
         </a>
       </div>
       <div className="herotab-bestselling">
-        <h1>Bestselling Products</h1>
-        <p>Unmatched design—superior performance and customer satisfaction in one.</p>
-        <Swiper>
+        <h1 className="herotab-bestselling-h1">Bestselling Products</h1>
+        <p className="herotab-bestselling-p">Unmatched design—superior performance and customer satisfaction in one.</p>
+        <Swiper
+        slidesPerView={4}
+        slideToClickedSlide={true}
+        controller={true}>
+          <SwiperSlide><ProductCard product={items} /></SwiperSlide>
+      
+          <SwiperSlide><ProductCard product={items} /></SwiperSlide>
+        
+          <SwiperSlide><ProductCard product={items} /></SwiperSlide>
+        
+          <SwiperSlide><ProductCard product={items} /></SwiperSlide>
+        
           <SwiperSlide><ProductCard product={items} /></SwiperSlide>
         </Swiper>
+      </div>
+      <div className="category-main">
+        <div className='category-main-card'>
+          <img src="	https://demo-milano.myshopify.com/cdn/shop/files/fs_new_3.webp?v=1748226426&width=550" alt="Category 1" />
+          <p>BOLD ESSENTIALS</p>
+          <h3>Golden Lyers</h3>
+          <p>Soft knits in rich tones-effortlessly stylish, endlessly wearable.</p>
+          <h4><a href='/'>Shop Collection</a></h4>
+        </div>
+        <div className='category-main-card'>
+          <img src="https://demo-milano.myshopify.com/cdn/shop/files/fs_new_4.webp?v=1748226426&width=550" alt="Category 1" />
+          <p>SAVE 10-30% ON STATEMENT PIECES</p>
+          <h3>Modern Ease Unfolded</h3>
+          <p>Effortless looks for every moment- from poolside to city strolls.</p>
+          <h4><a href='/'>Shop Collection</a></h4>
+        </div>
       </div>
       
     </div>

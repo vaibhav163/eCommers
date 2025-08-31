@@ -1,5 +1,8 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import './shop.css';
+import Productpage from './productpage';
+// import Productdisplay from './productdisplay';
 // import Navbar from './navbar';
 
 const shop = () => {
@@ -39,7 +42,7 @@ const swiperproductlist=[
   return (
     <div>
         {/* <Navbar /> */}
-            <img  style={{minHeight:"200px" , maxheight:"300px", height:"auto", width:"100vw", position:"relative"}} src="https://demo-milano.myshopify.com/cdn/shop/files/img_cate1.jpg?v=1745919961&width=360"/>
+            <img className='shop-banner'  src="https://demo-milano.myshopify.com/cdn/shop/files/img_cate1.jpg?v=1745919961&width=360"/>
             <div className='shop-banner-text'>
                 <h2>Shop the Latest Trends</h2>
                 <p>Discover the newest arrivals in our collection</p>
@@ -47,7 +50,7 @@ const swiperproductlist=[
           <Swiper 
           spacebetween={20}
           breakpoints={{
-            640: {
+            450: {
               slidesPerView: 2,
               spaceBetween: 20
             },
@@ -63,14 +66,17 @@ const swiperproductlist=[
           >
             {swiperproductlist.map((e)=>(
               <SwiperSlide key={e.index}>
-                <img src={e.imageUrl} alt={e.name} />
-                <p>{e.name}</p>
+                <img className='swiper-slide-image' src={e.imageUrl} alt={e.name} />
+                <p className='swiper-slide-text'>{e.name}</p>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
+        {/* <Productdisplay /> */}
+        <Productpage />
+
     </div>
   )
 }
 
-export default shop
+export default shop;

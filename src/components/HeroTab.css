@@ -54,3 +54,21 @@
   transform: translate(-50%, -50%);
   color: white;
 }
+.herotab-bestselling-h1{
+  text-align: center;
+  margin-bottom:2rem;
+}
+.herotab-bestselling-p{
+  text-align: center;
+  margin: 2rem;
+  color:grey
+}
+.shopbycategory-h1{
+ text-align: center;
+  margin:2rem;
+}
+.shopbycategory-p{
+  text-align: center;
+  margin: 2rem;
+  color:grey
+}
